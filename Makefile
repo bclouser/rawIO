@@ -4,10 +4,10 @@ CFLAGS := -Wall
 ALL: peek poke
 
 peek: rawio.c
-	$(CC) $(CFLAGS) -Dpoke $< -o $@
+	$(CC) $(CFLAGS) -DPEEK $< -o $@
 
 poke: rawio.c
-	$(CC) $(CFLAGS) -Dpoke $< -o $@
+	$(CC) $(CFLAGS) -DPOKE $< -o $@
 
 
 clean:
